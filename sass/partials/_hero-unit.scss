@@ -1,0 +1,216 @@
+/* ------------------ HERO UNIT ------------------ */
+
+.hero-unit {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+
+	&.hero-light {
+		.hero-content .hero-text .hero-heading,
+		.hero-content .hero-text p {
+			color: #fff;
+		}
+	}
+
+	.hero-bg-pattern {
+		@include opacity(0.2);
+
+		width: 100%;
+		height: 100%;
+		background: {
+			image: image-url('noise_lines_@2X.png');
+			repeat: repeat;
+		}
+	}
+
+	.hero-content {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		margin-top: -10em;
+		z-index: 2;
+
+		@include screen(320px, $screen-xsmall) {
+			margin-top: -40px;
+		}
+
+		@include max-screen(320px) {
+			margin-top: -80px;
+		}
+
+		.hero-text {
+			.hero-heading,
+			p {
+				font-family: $secondary-font-family;
+				color: $heading-text-color;
+				font-weight: 300;
+			}
+
+			.hero-heading {
+				font-size: 6em;
+
+				@include max-screen($screen-small) {
+					font-size: 4em;
+				}
+
+				@include max-screen($screen-xsmall) {
+					font-size: 2em;
+				}
+			}
+
+			p {
+				@include inline-block;
+
+				font-size: 2em;
+				background-color: rgba(#000, 0.5);
+				color: #fff;
+				padding: 0 10px;
+
+				@include max-screen($screen-small) {
+					font-size: 1.5em;
+				}
+
+				@include max-screen($screen-xsmall) {
+					font-size: 1.3em;
+				}
+			}
+		}
+
+		.hero-buttons {
+			z-index: 2;
+
+			.btn {
+				margin: 0 5px;
+				font-weight: 400;
+
+				@include max-screen($screen-xsmall) {
+					margin-bottom: 10px;
+				}
+			}
+
+			#btn-about {
+				padding: 15px 41px;
+			}
+
+			#btn-contact {
+				padding: 15px 30px;
+			}
+
+			@include max-screen($screen-xsmall) {
+				#btn-about, #btn-contact {
+					padding: 10px 16px;	
+				}
+			}
+		}
+	}
+
+	.slide-caption {
+		padding-bottom: 50px;
+		margin: 0 auto;
+
+		@include max-screen($screen-xsmall) {
+			padding-bottom: 0;
+		}
+	}
+
+	.slideshow {
+		.slide-navigation {
+			#prevslide,
+			#nextslide {
+				@include border-radius(2px);
+				@include transition-property(background);
+				@include transition-duration(0.1s);
+				@include transition-timing-function(linear);
+
+				position: absolute;
+				top: 50%;
+				margin-top: -30px;
+				width: 60px;
+				height: 60px;
+
+				background-color: rgba(#fff, 0.1);
+				font-size: 3em;
+				line-height: 1.2;
+				color: #fff;
+				text-align: center;
+				cursor: pointer;
+				z-index: 9;
+			}
+
+			#nextslide {
+				right: 0;
+			}
+		}
+
+		ul#slide-list {
+			position: absolute;
+			left: 50%;
+			bottom: 40px;
+
+			@include max-screen($screen-xsmall) {
+				display: none;
+			}
+
+			li {
+
+				a {
+					@include border-radius(15px);
+					@include transition-property(background-color, border-color);
+					@include transition-duration(0.2s);
+					@include transition-timing-function(linear);
+
+					display: block;
+					width: 15px;
+					height: 15px;
+					text-indent: -9999px;
+					border: 2px solid #fff;
+					cursor: pointer;
+
+					&:hover {
+						background-color: #e6e6e6;
+					}
+				}
+
+				&.current-slide {
+					a {
+						background-color: #e6e6e6;
+					}
+				}
+				
+			}
+		}		
+	}
+
+	#controls {
+		#pauseplay,
+		#video-volume {
+			position: absolute;
+			left: 50%;
+			bottom: 30px;
+			cursor: pointer;
+			color: #fff;
+
+			&:hover {
+				text-decoration: none;
+				color: #e6e6e6;
+			}
+
+			i {
+				display: block;
+				width: 10px;
+				margin-left: -8px;
+			}
+		}
+		
+		#video-volume {
+			z-index: 9999;
+		}
+
+		@include max-screen($screen-xsmall) {
+			display: none;
+		}
+	}
+
+}
+

@@ -1,0 +1,17 @@
+/* ------------------ CALL TO ACTION ------------------ */
+
+.call-to-action {
+	font-size: 3em;
+	text-align: center;
+	padding: 40px 0;
+	overflow: hidden;
+
+	a {
+		color: #fafafa; /* will be rendered as phone link on safari iOS*/
+	}
+
+	@include max-screen($screen-xsmall) {
+		padding: 0 15px;
+		font-size: 2em;
+	}
+}

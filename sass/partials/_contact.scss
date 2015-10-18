@@ -1,0 +1,40 @@
+/* ------------------ CONTACT ------------------ */
+
+.google-map {
+	margin-bottom: 60px;
+
+	#map-canvas {
+		height: 300px;
+	}	
+}
+
+
+.contact-info {
+	text-align: center;
+
+	h3, i {
+		color: $heading-text-color;
+	}
+	
+	h3 {
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	i {
+		font-size: 40px;
+	}
+
+	@include max-screen($screen-small) {
+		.row > div {
+			margin-bottom: 50px;
+		}	
+	}
+	
+}
+
+@include max-screen($screen-xsmall) {
+	.contact {
+		padding-bottom: 0;
+	}
+}

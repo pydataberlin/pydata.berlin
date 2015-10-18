@@ -1,0 +1,18 @@
+/* ------------------ ABOUT ------------------ */
+.about {
+	position: relative;
+
+	.img-left {
+		position: absolute;
+		bottom: -60px;
+		left: -66px;
+
+		@include max-screen(1370px) {
+			left: -140px;
+		}
+		
+		@include max-screen($screen-large) {
+			display: none;
+		}
+	}
+}

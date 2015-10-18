@@ -1,0 +1,66 @@
+/* ------------------ TESTIMONIAL ------------------ */
+
+.testimonial {
+	background-image: image-url('sky.jpg');
+	text-align: center;
+	color: #fff;
+
+	.testimonial-text {
+		margin-bottom: 30px;
+		font-size: 3em;
+		font-family: $secondary-font-family;
+
+		@include max-screen($screen-xsmall) {
+			font-size: 2em;	
+		}
+
+		.quote-left,
+		.quote-right {
+			position: relative;
+		}
+
+		.quote-left {
+			margin-right: 10px;
+			top: -10px;
+		}
+
+		.quote-right {
+			margin-left: 10px;
+			bottom: -10px;
+		}
+	}
+
+	.testimonial-author {
+		.author-name {
+			font-size: 1.2em;
+			font-weight: 400;
+			margin-bottom: 0;
+		}
+
+		.author-title {
+			font-size: 0.9em;
+		}
+	}
+
+	.flexslider {
+		@include box-shadow(none);
+
+		margin-bottom: 35px;
+		background: transparent;
+		border: none;
+	}
+
+	.flex-control-paging li a {
+		@include transition-property(background);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in);
+
+		background: rgba(#fff, 0.5);
+
+		&:hover,
+		&.flex-active {
+			background: rgba(#fff, 0.9);
+		}
+	}
+	
+}

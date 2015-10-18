@@ -1,0 +1,73 @@
+/* ------------------ BASE STYLES ------------------ */
+
+// import compass
+@import "compass/css3";
+
+
+// all variables
+$base-font-family: "Open Sans", sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 300;
+$secondary-font-family: "Dosis", sans-serif;
+
+// general theme colors
+$section-bg-color-default: #fafafa;
+$section-bg-color-alternate: #f5f5f5;
+$section-bg-most-dark: #4d4d4d;
+$primary-accent-color: #ffae3f;
+$secondary-accent-color: #00aeef;
+$heading-text-color: #646464;
+$subheading-text-color: #c2c2c2;
+$body-text-color: #777;
+$horizontal-line-color: #acacac;
+
+// special colors
+$portfolio-filter-bg-color: #e2e2e2;
+$portfolio-filter-bg-active-color: $primary-accent-color;
+$portfolio-filter-link-color: #9a9a9a;
+
+// screen breakpoint (bootstrap)
+$screen-xsmall: 480px;
+$screen-small: 768px;
+$screen-medium: 992px;
+$screen-large: 1200px;
+
+// import all modules
+@import "../modules/all";
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {	
+	font: {
+		family: $base-font-family;
+		size: $base-font-size;
+		weight: $base-font-weight;
+	}
+
+	color: $body-text-color;
+	background-color: #fff !important;
+	line-height: 1.6;
+
+	&.fullscreen-image-background {
+		background: {
+			image: image-url('sliders/slider3.png');
+			size: cover;
+			repeat: no-repeat;
+			position: center center;
+		}
+
+		@include min-screen(1025px) {
+			background-attachment: fixed;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $secondary-font-family;
+	font-weight: 300;
+	color: $heading-text-color;
+	margin-top: 0;
+}

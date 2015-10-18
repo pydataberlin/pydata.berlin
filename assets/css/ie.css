@@ -1,0 +1,10 @@
+/* IE Fallback */
+
+/* show wow js instead */
+.wow {
+	visibility: visible;
+}
+
+.videoBG video {
+	width: 100% !important;
+}

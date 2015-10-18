@@ -1,0 +1,55 @@
+/* ------------------ TEAM ------------------ */
+
+.team-member {
+	margin-bottom: 60px;
+
+	&.media > .pull-left {
+		margin-right: 30px;
+	}
+
+	.team-name {
+		@include inline-block;
+
+		padding: 0 5px;
+		line-height: 1.6;
+		color: #fff;
+		background-color: $primary-accent-color;
+	}
+
+	strong {
+		display: block;
+		font-size: 0.9em;
+		color: $heading-text-color;
+	}
+
+	hr {
+		width: 50px;
+		border-top: 1px solid $horizontal-line-color;
+		margin-top: 10px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	@include max-screen($screen-xsmall) {
+		text-align: center;
+		
+		&.media > .pull-left {
+			display: inline;
+			float: none !important;
+			margin-bottom: 20px;
+			margin-right: 0;
+		}
+
+		hr {
+			margin: 20px auto;
+		}
+	}
+}
+
+@include max-screen($screen-xsmall) {
+	.team {
+		padding-bottom: 0;
+	}
+}

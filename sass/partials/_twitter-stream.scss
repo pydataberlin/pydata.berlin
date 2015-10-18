@@ -1,0 +1,55 @@
+/* ------------------ TWITTER STREAM ------------------ */
+
+.twitter-stream {
+	text-align: center;
+	padding: 40px 0;
+	background-color: #00aeef;
+
+	@include max-screen($screen-xsmall) {
+		padding: 25px 0;
+	}
+
+	.twitter-icon {
+		@include border-radius(50%);
+		@include inline-block;
+		
+		width: 50px;
+		height: 50px;
+		margin-bottom: 20px;
+		background-color: #00a6e7;
+
+		i {
+			font-size: 30px;
+			line-height: 50px;
+			color: #36c3ff;
+		}
+	}
+
+	#tweet {
+		ul {
+			list-style-type: none;
+
+			li {
+				color: #fff;
+
+				a {
+					text-decoration: underline;
+					color: #fff;
+					text-overflow: ellipsis;
+
+					span {
+						word-wrap: break-word;
+					}
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+				.timePosted {
+					font-size: 0.8em;
+				}
+			}
+			
+		}
+	}
+}

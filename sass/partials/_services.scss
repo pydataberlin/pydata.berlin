@@ -1,0 +1,67 @@
+/* ------------------ SERVICES ------------------ */
+
+.service-item {
+	margin-bottom: 60px;
+
+	.service-icon {
+		position: absolute;
+		top: 0;
+		font-size: 5em;
+		color: $primary-accent-color;
+	}
+
+	.service-text {
+		margin-left: 100px;
+		overflow: hidden;
+
+		h3 {
+			margin-top: 6px;
+			color: $heading-text-color;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		a.read-more {
+			color: $primary-accent-color;
+
+			span {
+				@include transition-property(all);
+				@include transition-duration(0.2s);
+				@include transition-timing-function(linear);
+				@include opacity(0);
+				
+				font-size: 0.8em;
+				margin-left: -80px;
+
+				@include max-screen($screen-large) {
+					@include opacity(1);
+					margin-left: 0;
+				}
+			}
+
+			i {
+				position: relative;
+				top: 3px;
+				font-size: 1em;
+			}
+
+			&:hover {
+				text-decoration: none;
+
+				span {
+					@include opacity(1);
+					margin-left: 0;
+				}
+			}
+		}
+		
+	}
+}
+
+@include max-screen($screen-xsmall) {
+	.services {
+		padding-bottom: 0;
+	}	
+}
